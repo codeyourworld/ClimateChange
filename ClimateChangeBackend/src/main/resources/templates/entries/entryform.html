@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="en"><head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Auf einen Besseren Klimaschutz</title>
+  <style>
+body {
+  padding-top: 5rem;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+
+</style></head>
+
+
+<body>
+	<div class="container">
+
+		<h1>Neuer Eintrag</h1>
+	    <!--form action="#" th:action="@{/entry}" th:object="${entryForm}" method="post"-->
+	    <form action="#" th:object="${entryForm}" th:action="@{/entry}" method="post">
+
+			<div class="form-group">
+				<label for="testId">Name</label>
+				<input type="text" class="form-control" id="testId" th:field="*{name}"/>
+			</div>
+			
+			<div class="form-group">
+				<label for="infosId">Informationen</label>
+				<textarea class="form-control" id="infosId" rows="3" th:field="*{info}"></textarea>
+			</div>
+			
+			<!--div class="form-group">
+				<label for="infosId">Informationen</label>
+				<textarea class="form-control" id="infosId" rows="3" th:field="*{info}">
+			</div-->
+			
+			<div class="form-group">
+				<label for="addressId">Adresse</label>
+				<input type="text" class="form-control" id="addressId" th:field="*{address}"/>
+			</div>
+			
+			<div class="form-group">
+				<label for="openingHoursId">Öffnungszeiten</label>
+				<input type="text" class="form-control" id="openingHoursId" th:field="*{openingHours}"/>
+			</div>
+
+			<div class="form-group">
+				<label for="urlId">Url</label>
+				<input type="text" class="form-control" id="urlId" th:field="*{url}"/>
+			</div>
+
+			<div class="form-group">
+				<label for="emailId">Email</label>
+				<input type="text" class="form-control" id="emailId" th:field="*{email}"/>
+			</div>
+
+			<div class="form-group">
+				<label for="phoneID">Telefon</label>
+				<input type="text" class="form-control" id="phoneID" th:field="*{phone}"/>
+			</div>
+
+
+	        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+			  
+	    </form>
+    </div>
+</body>
+</html>

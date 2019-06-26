@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en"><head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Auf einen Besseren Klimaschutz</title>
+  <style>
+body {
+  padding-top: 5rem;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+
+</style></head>
+<body>
+	<div class="container">
+		<h1>Result</h1>
+	    <p th:text="'Name: ' + ${entry.name}" />
+	    <p th:text="'Infos: ' + ${entry.info}" />
+	    <p th:text="'Adresse: ' + ${entry.address}" />
+	    <p th:text="'Öffnungszeiten: ' + ${entry.openingHours}" />
+	    <p th:text="'Email: ' + ${entry.email}" />
+	    <p th:text="'URL: ' + ${entry.url}" />
+	    <p th:text="'Telefonnummer: ' + ${entry.phone}" />
+	    <a href="/entry">Submit another message</a>
+	</div>	    
+</body>
+</html>
